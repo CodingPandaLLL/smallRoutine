@@ -1,4 +1,4 @@
-package exercise;
+package exercise.hw;
 
 /*
 二、八、十、十六进制相互转换

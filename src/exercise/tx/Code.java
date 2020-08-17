@@ -12,7 +12,7 @@ import java.util.Scanner;
 示例1
 输入
 baca
-输出（baca对应的十进制数事多）
+
 输出
 16331
  */

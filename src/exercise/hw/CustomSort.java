@@ -31,6 +31,7 @@ import java.util.Scanner;
 public class CustomSort {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
+        //输入
         while (sc.hasNextLine()){
             String[] IntArray=sc.nextLine().split(" ");
             Integer[] pIntegerArray=new Integer[IntArray.length];
@@ -38,6 +39,7 @@ public class CustomSort {
                 pIntegerArray[i]=Integer.valueOf(IntArray[i]);
             }
             int iSortFlag = Integer.valueOf(sc.nextLine());
+            //调用方法
             sortIntegerArray(pIntegerArray,iSortFlag);
             for (int i = 0; i < pIntegerArray.length; i++) {
                 System.out.print(pIntegerArray[i]+" ");
@@ -47,6 +49,7 @@ public class CustomSort {
 
     }
 
+    //排序方法
     public static void sortIntegerArray(Integer[] pIntegerArray, int iSortFlag) {
         if (iSortFlag==0){
             for (int i = 0; i < pIntegerArray.length; i++) {

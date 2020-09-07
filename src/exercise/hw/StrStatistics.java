@@ -26,7 +26,7 @@ import java.util.*;
 public class StrStatistics {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        while (!sc.nextLine().equals("\\0")){
+        while (sc.hasNext()){
             String input = sc.nextLine();
             //输入的字符存放到hashMap中
             Map<String, String> saveInput = new HashMap<String, String>();
@@ -98,6 +98,10 @@ public class StrStatistics {
                 String j0 = list.get(j).substring(0, 1);
                 Integer j1 = Integer.valueOf(list.get(j).substring(1, list.get(j).length()));
                 if (i1 < j1) {
+                    int k = i1;
+                    list.set(i, j0 + j1);
+                    list.set(j, i0 + k);
+                }else if(i1 == j1 && i0.charAt(0)>j0.charAt(0)){
                     int k = i1;
                     list.set(i, j0 + j1);
                     list.set(j, i0 + k);

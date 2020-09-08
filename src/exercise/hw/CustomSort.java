@@ -32,17 +32,16 @@ public class CustomSort {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         //输入
-        while (sc.hasNextLine()){
-            String[] IntArray=sc.nextLine().split(" ");
-            Integer[] pIntegerArray=new Integer[IntArray.length];
-            for (int i = 0; i < IntArray.length; i++) {
-                pIntegerArray[i]=Integer.valueOf(IntArray[i]);
+        while(sc.hasNext()){
+            int times = sc.nextInt();
+            Integer[] arr = new Integer[times];
+            for(int i = 0; i < times; i++){
+                arr[i] = sc.nextInt();
             }
-            int iSortFlag = Integer.valueOf(sc.nextLine());
-            //调用方法
-            sortIntegerArray(pIntegerArray,iSortFlag);
-            for (int i = 0; i < pIntegerArray.length; i++) {
-                System.out.print(pIntegerArray[i]+" ");
+            int flag = sc.nextInt();
+            sortIntegerArray(arr, flag);
+            for (int i = 0; i < arr.length; i++) {
+                System.out.print(arr[i]+" ");
             }
             System.out.println("");
         }

@@ -40,7 +40,27 @@ public class ExplainNum {
                 }else {
                     strList1.add(strList.get(i));
                 }
-            } else {
+            } else if(i==0) {
+                if (48 <= c && 57 >= c) {
+                    int c1 = strList.get(i + 1).charAt(0);
+                    if (48 <= c1 && 57 >= c1) {
+                        strList1.add("*");
+                        strList1.add(strList.get(i));
+                    } else {
+                        strList1.add("*");
+                        strList1.add(strList.get(i));
+                        strList1.add("*");
+                    }
+                } else {
+                    int c1 = strList.get(i + 1).charAt(0);
+                    if (48 <= c1 && 57 >= c1) {
+                        strList1.add(strList.get(i));
+                        strList1.add("*");
+                    } else {
+                        strList1.add(strList.get(i));
+                    }
+                }
+            }else{
                 if (48 <= c && 57 >= c) {
                     int c1 = strList.get(i + 1).charAt(0);
                     if (48 <= c1 && 57 >= c1) {

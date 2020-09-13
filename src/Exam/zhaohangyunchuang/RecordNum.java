@@ -1,11 +1,16 @@
+package Exam.zhaohangyunchuang;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
 /*
-
+找出数组中那个数只出现过一次
+eg:
+输入[3,3,9,0,9]
+输出：0
  */
-public class Main {
+public class RecordNum {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String str=sc.nextLine();

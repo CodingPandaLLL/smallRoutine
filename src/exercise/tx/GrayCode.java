@@ -1,6 +1,7 @@
 package exercise.tx;
 
 import java.util.*;
+import java.util.ArrayList;
 
 /*
 在一组数的编码中，若任意两个相邻的代码只有一位二进制数不同， 则称这种编码为格雷码(Gray Code)，请编写一个函数，使用递归的方法生成N位的格雷码。
@@ -30,7 +31,7 @@ public class GrayCode {
         } else {
             String[] lastGray = getGray(n - 1);
 
-            List<String> returnSet = new ArrayList<>();
+            List returnSet = new ArrayList();
             for (int i = 0; i < lastGray.length; i++) {
                 String v1="0" + lastGray[i];
                 if(!returnSet.contains(v1)){
@@ -49,7 +50,7 @@ public class GrayCode {
                     returnSet.add(v4);
                 }
             }
-            String[] returnStr= returnSet.toArray(new String[0]);
+            String[] returnStr= (String[]) returnSet.toArray(new String[0]);
             return returnStr;
         }
     }
